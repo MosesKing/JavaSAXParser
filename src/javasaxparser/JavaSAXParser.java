@@ -22,15 +22,12 @@ public class JavaSAXParser extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
-        Parent root = (Parent)loader.load();
-        FXMLDocumentController controller = (FXMLDocumentController)loader.getController();
+        Parent root = loader.load();
         
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
         stage.show();
-        
-        controller.ready(stage);
     }
 
     public static void main(String[] args) {
